@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Shubham Sawant Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		.one-third {
+			position: relative;
+		}
+
+		/* CSS for the fade overlay */
+		.fade-overlay {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+			pointer-events: none;
+			/* Allow interactions with elements below */
+		}
+
+
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Shubham Sawant</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="home-section" class="hero">
+		<div class="home-slider owl-carousel">
+			<div class="slider-item">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png); background-size: cover; background-position: center center; position: relative;">
+							<div class="fade-overlay"></div>
+						</div>
+						<div class="one-forth d-flex align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Shubham Sawant</span></h1>
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+								<script>
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+									// Create an array of typing text
+									const typingTexts = ['Student  ', 'Tech Enthusiast  ', 'Learner   '];
+									// Function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Slow down the typing animation
+										}
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+								</script>
+								<br><br>
+								<h2>A Data Science Aspirant</h2>
+								<p><a href="https://www.linkedin.com/in/shubhy04/"
+										class="btn btn-primary py-3 px-4">LinkedIn</a>
+									<a href="https://github.com/shubhy04"
+										class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<br>
+				
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row d-flex align-items-stretch">
+				<div class="col-md-6 col-lg-5 d-flex">
+					<div class="img-about img d-flex align-items-stretch">
+						<div class="overlay">
+							<div class="row">
+								<div class="col-sm-6 col-md-5">
+									<div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									</div>
+								</div>
+								<div class="col-sm-6 col-md-7">
+									<div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Shubham Sawant</span></p>
+										<p><span class="title-s">Status: </span> <span>Student</span></p>
+										<p><span class="title-s">Experience: </span> <span>Fresher </span></p>
+										<p><span class="title-s">Address: </span> <span>Mumbai</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="skill-mf">
+								<p class="title-s">Skills</p>
+								<span>PYTHON</span> <span class="pull-right">85%</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85"
+										aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<span>Data Visualization</span> <span class="pull-right">90%</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90"
+										aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85"
+										aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<span>SQL</span> <span class="pull-right">75%</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+										aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<span>Power BI</span> <span class="pull-right">90%</span>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90"
+										aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+					<div class="row justify-content-start pb-3">
+						<div class="col-md-12 heading-section ftco-animate">
+							<h1 class="big">About</h1>
+							<h2 class="mb-4">About Me</h2>
+							<p>I am a data enthusiast with a passion for transforming complex datasets into meaningful
+								insights. Skilled in Python, SQL, and data visualization tools like Power BI and Jupyter
+								Notebook, I enjoy building interactive and insightful web applications. With experience
+								in various data analysis projects, I aim to deliver impactful solutions. Outside of
+								work, I am interested in space exploration, music, and traveling.</p>
+							<ul class="about-info mt-4 px-md-0 px-2">
+								<li class="d-flex"><span>Profile:</span> <span>Data Analytics &amp; Data Science</span>
+								</li>
+								<li class="d-flex"><span>Education:</span> <span>Bachelor of Science in Information
+										Technology</span></li>
+								<li class="d-flex"><span>Language:</span> <span>English, Marathi, Hindi</span></li>
+								<li class="d-flex"><span>Visualization Tools:</span> <span>Microsoft Power BI, Excel,
+										Jupyter Notebook, Matplotlib &amp; Seaborn</span></li>
+								<li class="d-flex"><span>Other Skills:</span> <span>Pandas, NumPy, Excel, Git &amp;
+										Github, PySpark &amp; Flask </span></li>
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Passionate IT graduate with a Bachelor's in Information Technology, specializing in Data Analysis
+						and Data Science. Seeking a challenging role to apply and grow my skills, contributing to the
+						efficiency and reliability of IT systems.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Projects</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug 2024</span>
+						<h2>Olympiasis</h2>
+						<span class="position">Olympic Data Analysis Web App</span>
+						<p class="mt-4"> <a href="https://github.com/shubhy04/Olympic-Data-Analysis">GitHub</a>
+
+						<ul>
+							<li>Conducted a comprehensive analysis of Olympic data, focusing on modules like 'Medal
+								Tally', 'Overall Analysis', 'Country-wise' and 'Athlete-wise Analysis'.</li>
+							<li>Used Python libraries like Streamlit for app development, Pandas for data processing,
+								and Seaborn, Matplotlib, and Plotly for visualizations.</li>
+							<li>Included a Jupyter Notebook file to demonstrate the same analysis, offering an in-depth
+								exploration of Olympic history, trends, and athlete performance.</li>
+						</ul>
+
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">July 2024</span>
+						<h2>Hotel Booking Analysis</h2>
+						<span class="position">Exploratory Data Analysis</span>
+						<p class="mt-4"> <a
+								href="//github.com/shubhy04/Data-Analysis/tree/main/Hotel_Booking_Data_Analysis">GitHub</a>
+						<ul>
+							<li>I conducted an in-depth analysis of hotel booking data with the primary goal of
+								understanding the reasons behind booking cancellations.</li>
+							<li>Utilizing Exploratory Data Analysis (EDA) techniques, I performed comprehensive data
+								analysis and visualization to uncover patterns and insights.</li>
+							<li>Used Python, Pandas and Jupyter Notebook for data transformation and data cleaning,
+								Matplotlib and Seaborn for data visualization and preliminary insights.</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2024</span>
+						<h2>Bsc in Information Technology</h2>
+						<span class="position">Sathaye College, Vile Parle</span>
+						<p class="mt-4">CGPA: 9.15</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2020-2021</span>
+						<h2>Higher Secondary Certificate</h2>
+						<span class="position">Patkar College</span>
+						<p class="mt-4">Percentage: 88.67%</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 offset-md-3">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2019</span>
+						<h2>Secondary School Certificate</h2>
+						<span class="position">Father Joseph English High School</span>
+						<p class="mt-4">Percentage: 82%</p>
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<br>
+			<div class="row">
+				<h1 class="big-4">Interests & Hobbies</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-8 text-center">
+					<p class="mt-4" style="font-size: 1.25rem; line-height: 1.8;">
+						<strong>Space Exploration:</strong> Passionate about space and astronomy, following the latest
+						advancements and discoveries in space missions and research.<br><br>
+						<strong>Music:</strong> Experienced in playing traditional instruments like the pakhavaj and
+						harmonium, with a focus on creativity and discipline through musical practice and
+						performances.<br><br>
+						<strong>Traveling:</strong> Enjoy exploring new places and cultures through short trips with
+						friends, creating memorable experiences and embracing diverse adventures.
+					</p>
+				</div>
+			</div>
+
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p>
+						<a href="https://drive.google.com/file/d/1DylYWGPJcFndjUMgsf2EBaAZPbaUPE2C/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a>
+						<a href="https://drive.google.com/file/d/1KuqQc4GVoqMYsUwK4XPo8F3PSKOMFK8h/view?usp=sharing" class="btn btn-white btn-outline-white py-4 px-5 ml-3">Download Cover Letter</a>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are the sample Data Analytics projects on SQL, Python, Power BI & Jupyter Notebook.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/shubhy04/Dashboards/tree/main/Moon-Mission"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/shubhy04/Dashboards/tree/main/Moon-Mission">Moon-Mission-Dashboard
+									using PowerBI</a></h3>
+							<p>It is an interactive visualization built using Power BI, offering insights into the
+								history of lunar missions from 1958 to 2023.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/shubhy04/Playstore-Data-Analysis/tree/main"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/shubhy04/Playstore-Data-Analysis/tree/main">Playstore-Data-Analysis
+									using PySpark and SQL</a></h3>
+							<p>This project involves a comprehensive analysis of Playstore data, focusing on data
+								cleaning, processing, and visualization.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/shubhy04/Data-Analysis/tree/main/Road_Accident_Dashboard"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/shubhy04/Data-Analysis/tree/main/Road_Accident_Dashboard">Road
+									Accident Report Using Excel</a></h3>
+							<p>The Report features dynamic charts and filters, allowing users to explore accident data
+								across various dimensions such as location, time, and severity.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/shubhy04/Zomato-Data-Analysis/tree/main"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/shubhy04/Zomato-Data-Analysis/tree/main">Zomato-Data-Analysis Using Python</a>
+							</h3>
+							<p>This project provides insights into the Zomato dataset, analyzing restaurants, cuisines, pricing, ratings, and trends.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/shubhy04/Data-Analysis/tree/main/Social_Buzz_Accenture"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/shubhy04/Data-Analysis/tree/main/Social_Buzz_Accenture">Social Buzz</a></h3>
+							<p>This project involved a simulation where I acted as a Data Analyst at Accenture, analyzing 7 datasets to uncover insights into content trends and presenting key findings.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Certificates</h1>
+					<h2 class="mb-4">Certifications</h2>
+					<p>Below are some of my Certifications.</p>
+				</div>
+			</div>
+			
+			
+			<div class="row d-md-flex align-items-center">
+
+				
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							
+							<span>Forage Accenture Data Analytics Certification</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<span>Basic Data Science with Python</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<span>Statistical Data Analysis using MS-Excel</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<span>Descriptive Statistics using Python</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/shubhy04" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Mumbai, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://9594698507">+91 95946 98507</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:sawantshubham861@gmail.com">sawantshubham861@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="https://drive.google.com/file/d/1DylYWGPJcFndjUMgsf2EBaAZPbaUPE2C/view?usp=sharing">resumelink</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<li class="ftco-animate"><a href="https://github.com/shubhy04"><span
+									class="icon-github"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/shubhy04/"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://www.snapchat.com/add/shubhm_sawant"><span
+									class="icon-snapchat"></span></a></li>
+						<li class="ftco-animate"><a href="https://facebook.com/shubham.sawant.5872682"><span
+									class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a href="https://instagram.com/shubhy_04/"><span
+									class="icon-instagram"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section" style="padding: 10px 0; font-size: 10px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p style="margin: 0;">
+						Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
+							href="https://colorlib.com" target="_blank" style="color: inherit; text-decoration: none;">Colorlib</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
