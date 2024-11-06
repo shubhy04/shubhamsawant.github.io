@@ -22,6 +22,18 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script>
+		window.onload = function() {
+			const links = document.querySelectorAll('a');
+			links.forEach(link => {
+				// Set target="_blank" for all links except the one with class "navbar-brand"
+				if (!link.classList.contains('navbar-brand')) {
+					link.setAttribute('target', '_blank');
+				}
+			});
+		};
+	</script>
+	
 
 
 
@@ -491,15 +503,15 @@
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="https://github.com/shubhy04/Zomato-Data-Analysis/tree/main"
+						<a href="https://github.com/shubhy04/Machine-Learning/tree/main/Campus-Placement-Predictor"
 							class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
 						</a>
 						<div class="text mt-3 float-right d-block">
 
 							<h3 class="heading"><a
-									href="https://github.com/shubhy04/Zomato-Data-Analysis/tree/main">Zomato-Data-Analysis Using Python</a>
+									href="https://github.com/shubhy04/Machine-Learning/tree/main/Campus-Placement-Predictor">Campus Placement Predictor</a>
 							</h3>
-							<p>This project provides insights into the Zomato dataset, analyzing restaurants, cuisines, pricing, ratings, and trends.</p>
+							<p>This project is a basic ML model to predict the chances of students being placed during campus recruitment. The project was developed as an introductory exploration into machine learning concepts and techniques.</p>
 						</div>
 					</div>
 				</div>
